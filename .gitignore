@@ -1,0 +1,19 @@
+.gradle
+.idea/
+*.apk
+captures/
+
+.DS_Store
+/local.properties
+/gradle.properties
+/*iml
+*/*iml
+build/
+out/
+
+# jni files
+*.o
+*.o.d
+*.db
+
+.externalNativeBuild
