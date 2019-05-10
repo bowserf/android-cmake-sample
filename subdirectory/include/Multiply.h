@@ -1,0 +1,6 @@
+#ifndef ANDROID_CMAKE_SAMPLE_MULTIPLY_H
+#define ANDROID_CMAKE_SAMPLE_MULTIPLY_H
+
+long multiply(long value1, long value2);
+
+#endif //ANDROID_CMAKE_SAMPLE_MULTIPLY_H

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CMake sample</string>
+
+    <string name="multiplication_result">Multiplication result: %1$d</string>
 </resources>
