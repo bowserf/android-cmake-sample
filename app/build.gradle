@@ -16,6 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        // specify for which architectures we want to generate native library files.
         ndk {
             abiFilters 'armeabi-v7a', "x86", "arm64-v8a"
         }
@@ -30,7 +31,9 @@ android {
 
     externalNativeBuild {
         cmake {
+            // define the path where the CMakeList has been put for this module.
             path "src/main/cpp/CMakeLists.txt"
+            // specify the CMake version we want to use.
             version "3.10.2"
         }
     }
