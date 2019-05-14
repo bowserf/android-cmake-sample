@@ -28,3 +28,24 @@ include_directories (
 target_link_libraries(
         ${PROJECT_NAME}
         subdirectoryLibrary)
+
+# Import an already existing .so file
+# Here, we add a dependency to the shared_library prebuilt
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../../shared_library/include/)
+set(
+    SHARED_LIBRARY_SO
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../../../shared_library/prebuilt/debug/${CMAKE_ANDROID_ARCH_ABI}/libsharedLibrary.so)
+# IMPORTED allows to depends on a library file outside the project.
+add_library(
+    sharedLibrary
+    SHARED
+    IMPORTED)
+# IMPORTED_LOCATION specifies the location of the library file on disk
+set_target_properties(
+    sharedLibrary
+    PROPERTIES
+    IMPORTED_LOCATION ${SHARED_LIBRARY_SO})
+# Add the library to this project
+target_link_libraries(
+    ${PROJECT_NAME}
+    sharedLibrary)

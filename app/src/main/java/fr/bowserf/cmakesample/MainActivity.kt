@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,13 +14,22 @@ class MainActivity : AppCompatActivity() {
 
         val calculator = Calculator()
 
-        val tvResultMultiplication = findViewById<TextView>(R.id.tv_result_multiply)
+        val tvResultComputation = findViewById<TextView>(R.id.tv_result_computation)
+        val editTextVal1 = findViewById<EditText>(R.id.edit_value1)
+        val editTextVal2 = findViewById<EditText>(R.id.edit_value2)
 
         findViewById<Button>(R.id.btn_multiply).setOnClickListener {
-            val value1 = findViewById<EditText>(R.id.edit_value1).text.toString().toLong()
-            val value2 = findViewById<EditText>(R.id.edit_value2).text.toString().toLong()
+            val value1 = editTextVal1.text.toString().toLong()
+            val value2 = editTextVal2.text.toString().toLong()
             val result = calculator.multiply(value1, value2)
-            tvResultMultiplication.text = resources.getString(R.string.multiplication_result, result)
+            tvResultComputation.text = resources.getString(R.string.multiplication_result, result)
+        }
+
+        findViewById<Button>(R.id.btn_addition).setOnClickListener {
+            val value1 = editTextVal1.text.toString().toLong()
+            val value2 = editTextVal2.text.toString().toLong()
+            val result = calculator.add(value1, value2)
+            tvResultComputation.text = resources.getString(R.string.addition_result, result)
         }
     }
 

@@ -1,0 +1,6 @@
+#ifndef ANDROID_CMAKE_SAMPLE_ADDITION_H
+#define ANDROID_CMAKE_SAMPLE_ADDITION_H
+
+long add(long value1, long value2);
+
+#endif //ANDROID_CMAKE_SAMPLE_ADDITION_H
