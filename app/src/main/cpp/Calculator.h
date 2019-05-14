@@ -4,6 +4,7 @@
 #include <jni.h>
 #include "Multiply.h"
 #include "Addition.h"
+#include "Subtraction.h"
 
 extern "C" {
 
@@ -14,6 +15,12 @@ JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_multiply(
         jlong value2);
 
 JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_add(
+        JNIEnv *env,
+        jobject /* this */,
+        jlong value1,
+        jlong value2);
+
+JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_minus(
         JNIEnv *env,
         jobject /* this */,
         jlong value1,

@@ -31,6 +31,13 @@ class MainActivity : AppCompatActivity() {
             val result = calculator.add(value1, value2)
             tvResultComputation.text = resources.getString(R.string.addition_result, result)
         }
+
+        findViewById<Button>(R.id.btn_subtraction).setOnClickListener {
+            val value1 = editTextVal1.text.toString().toLong()
+            val value2 = editTextVal2.text.toString().toLong()
+            val result = calculator.minus(value1, value2)
+            tvResultComputation.text = resources.getString(R.string.subtraction_result, result)
+        }
     }
 
 }

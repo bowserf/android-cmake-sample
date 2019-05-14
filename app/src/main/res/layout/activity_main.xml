@@ -61,12 +61,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_multiply" />
 
+    <Button
+        android:id="@+id/btn_subtraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MINUS"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_addition" />
+
     <TextView
         android:id="@+id/tv_result_computation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_addition" />
+        app:layout_constraintTop_toBottomOf="@id/btn_subtraction" />
 
 </android.support.constraint.ConstraintLayout>

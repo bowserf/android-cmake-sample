@@ -3,4 +3,5 @@
 
     <string name="multiplication_result">Multiplication result: %1$d</string>
     <string name="addition_result">Addition result: %1$d</string>
+    <string name="subtraction_result">Subtraction result: %1$d</string>
 </resources>

@@ -49,3 +49,24 @@ set_target_properties(
 target_link_libraries(
     ${PROJECT_NAME}
     sharedLibrary)
+
+# Import an already existing .so file
+# Here, we add a dependency to the shared_library prebuilt
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../../static_library/include/)
+set(
+    STATIC_LIBRARY_A
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../../../static_library/prebuilt/debug/${CMAKE_ANDROID_ARCH_ABI}/libstaticLibrary.a)
+# IMPORTED allows to depends on a library file outside the project.
+add_library(
+    staticLibrary
+    STATIC
+    IMPORTED)
+# IMPORTED_LOCATION specifies the location of the library file on disk
+set_target_properties(
+    staticLibrary
+    PROPERTIES
+    IMPORTED_LOCATION ${STATIC_LIBRARY_A})
+# Add the library to this project
+target_link_libraries(
+    ${PROJECT_NAME}
+    staticLibrary)

@@ -15,3 +15,11 @@ JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_add(
         jlong value2) {
     return add(value1, value2);
 }
+
+JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_minus(
+        JNIEnv *env,
+        jobject /* this */,
+        jlong value1,
+        jlong value2) {
+    return minus(value1, value2);
+}

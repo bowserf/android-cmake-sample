@@ -1,0 +1,6 @@
+#ifndef ANDROID_CMAKE_SAMPLE_SUBTRACTION_H
+#define ANDROID_CMAKE_SAMPLE_SUBTRACTION_H
+
+long minus(long value1, long value2);
+
+#endif //ANDROID_CMAKE_SAMPLE_SUBTRACTION_H
