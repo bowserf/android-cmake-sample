@@ -21,6 +21,7 @@ android {
             abiFilters 'armeabi-v7a', "x86", "arm64-v8a"
         }
 
+        // define the path where prebuilt ".so" files are embed them in the final APK
         sourceSets {
             debug {
                 jniLibs.srcDirs '../shared_library/prebuilt/debug'
