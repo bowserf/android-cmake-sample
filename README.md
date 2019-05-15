@@ -1,5 +1,5 @@
 [![NDK version](https://img.shields.io/static/v1.svg?label=NDK&message=version%2019&color=blue)]()
-[![CMake version](https://img.shields.io/static/v1.svg?label=CMake&message=3.10.2&color=red)]()
+[![CMake version](https://img.shields.io/static/v1.svg?label=CMake&message=3.6.0&color=red)]()
 
 # Android & CMake sample
 
