@@ -22,7 +22,10 @@ android {
         }
 
         sourceSets {
-            main {
+            debug {
+                jniLibs.srcDirs '../shared_library/prebuilt/debug'
+            }
+            release {
                 jniLibs.srcDirs '../shared_library/prebuilt/release'
             }
         }
