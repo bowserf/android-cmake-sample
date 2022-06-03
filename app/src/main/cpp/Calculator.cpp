@@ -1,6 +1,8 @@
 #include "Calculator.h"
 
-JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_multiply(
+extern "C" {
+
+JNIEXPORT jlong Java_fr_bowserf_cmakesample_Calculator_multiply(
         JNIEnv *env,
         jobject /* this */,
         jlong value1,
@@ -8,7 +10,7 @@ JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_multiply(
     return multiply(value1, value2);
 }
 
-JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_add(
+JNIEXPORT jlong Java_fr_bowserf_cmakesample_Calculator_add(
         JNIEnv *env,
         jobject /* this */,
         jlong value1,
@@ -16,10 +18,12 @@ JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_add(
     return add(value1, value2);
 }
 
-JNIEXPORT jlong JNICALL Java_fr_bowserf_cmakesample_Calculator_minus(
+JNIEXPORT jlong Java_fr_bowserf_cmakesample_Calculator_minus(
         JNIEnv *env,
         jobject /* this */,
         jlong value1,
         jlong value2) {
     return minus(value1, value2);
+}
+
 }
