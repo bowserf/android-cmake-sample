@@ -17,10 +17,11 @@ function build_for_android {
   ABI=$1
   ANDROID_SYSTEM_VERSION=$2
   BUILD_TYPE_NAME=$3
-  if [ "$BUILD_TYPE_NAME" == "debug" ]
+  echo $BUILD_TYPE_NAME
+  if [[ "$BUILD_TYPE_NAME" == "debug" ]]
   then
     BUILD_TYPE="Debug"
-  elif [ "$BUILD_TYPE_NAME" == "release" ]
+  elif [[ "$BUILD_TYPE_NAME" == "release" ]]
   then
     BUILD_TYPE="Release"
   else
@@ -51,9 +52,11 @@ function build_for_android {
   rm -rf ${ABI_BUILD_DIR}
 }
 
-build_for_android armeabi-v7a android-19 debug
+build_for_android armeabi-v7a android-21 debug
 build_for_android arm64-v8a android-21 debug
-build_for_android x86 android-19 debug
-build_for_android armeabi-v7a android-19 release
+build_for_android x86 android-21 debug
+build_for_android x86_64 android-21 debug
+build_for_android armeabi-v7a android-21 release
 build_for_android arm64-v8a android-21 release
-build_for_android x86 android-19 release
+build_for_android x86 android-21 release
+build_for_android x86_64 android-21 release
