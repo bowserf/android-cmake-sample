@@ -12,11 +12,10 @@ This sample shows several use cases about how to use CMake:
 - to depends on another native module from your native module
 - to build Android application with native code.
 
-
 ## Project
 
-The application allows to do some computations on 2 numbers given in input. Computations are
-realized by native libraries, written in C/C++, whose the application depends on. Each computation
+The application allows you to do some computations on 2 numbers given in input. Computations are
+realized by native libraries, written in C/C++, embedded in the application. Each computation
 is realized by one of the library and each library is imported in a different way using CMake.
 
 The project contains 4 modules:
@@ -30,11 +29,10 @@ The project contains 4 modules:
 The `app` module contains the Android application code and depends on other modules to do
 computations.
 
-Other modules contains C/C++ code and each one do one different computation:
+Other modules contains C/C++ code and each one does one different computation:
 - `subdirectory` does a multiplication on 2 numbers.
 - `shared_library` does an addition on 2 numbers.
 - `static_library` does a subtraction on 2 numbers.
-
 
 #### App module
 

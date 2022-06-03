@@ -53,7 +53,7 @@ target_link_libraries(
         sharedLibrary
 )
 
-# Import an already existing .so file
+# Import an already existing .a file
 # Here, we add a dependency to the shared_library prebuilt
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../../static_library/include/)
 set(

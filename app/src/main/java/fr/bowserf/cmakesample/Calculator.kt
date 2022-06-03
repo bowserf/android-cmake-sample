@@ -13,5 +13,4 @@ class Calculator {
             System.loadLibrary("calculator")
         }
     }
-
 }
